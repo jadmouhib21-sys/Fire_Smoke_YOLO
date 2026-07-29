@@ -56,9 +56,8 @@ MyDrive/
 ```- `fire_smoke_dataset/` holds the downloaded Roboflow dataset.
 - `fire_smoke_demo/`  holds new/unseen images or videos used to demonstrate.
 - `FireSmokeYOLO/` folder is generated automatically by the notebook and holds all training outputs such as weights and predictions.
-
-
-**## Test Image Setup**
+```
+## Test Image Setup
 
 1. In Google Drive, create a folder named:
 
