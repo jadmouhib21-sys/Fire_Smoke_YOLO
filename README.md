@@ -58,7 +58,7 @@ MyDrive/
 - `FireSmokeYOLO/` folder is generated automatically by the notebook and holds all training outputs such as weights and predictions.
 
 
-## Test Image Setup
+**## Test Image Setup**
 
 1. In Google Drive, create a folder named:
 
