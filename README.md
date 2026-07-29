@@ -24,6 +24,64 @@ To what extent can a lightweight pretrained YOLO11n model accurately detect and 
 
 These results apply to an educational prototype and not to a tested fire alarm system.
 
+## Dataset 
+
+The dataset can be accessed publicly through Roboflow Universe at the following link:
+
+https://universe.roboflow.com/ashwath-oh952/fire-and-smoke-detection-o4uhv-onyzi
+
+Please use the version 1 of the above dataset and export it in the YOLOv8 format. There are two classes in the dataset – Fire and Smoke.
+
+The entire image dataset cannot be uploaded to this GitHub repository because it has thousands of images and corresponding labels. All the necessary details have been provided in data/README.md file.
+
+## Google Drive Folder Setup
+Before running the notebook, create this structure in Google Drive:
+```text
+MyDrive/
+├── fire_smoke_dataset/
+│   ├── data.yaml
+│   ├── train/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── valid/
+│   │   ├── images/
+│   │   └── labels/
+│   └── test/
+│       ├── images/
+│       └── labels/
+├── fire_smoke_demo/
+│   └── test.jpg
+└── FireSmokeYOLO/
+
+```- `fire_smoke_dataset/` holds the downloaded Roboflow dataset.
+- `fire_smoke_demo/`  holds new/unseen images or videos used to demonstrate.
+- `FireSmokeYOLO/` folder is generated automatically by the notebook and holds all training outputs such as weights and predictions.
+
+
+## Test Image Setup
+
+1. In Google Drive, create a folder named:
+
+   ```text
+   MyDrive/fire_smoke_demo
+   ```
+
+2. Upload at least one untested fire or smoke picture.
+3. Label one image "test.jpg" so that the comparison table will work without changes.
+4. The notebook will load the original image from: 
+
+   ```text
+   /content/drive/MyDrive/fire_smoke_demo/test.jpg
+   ```
+
+5. After prediction, the annotated image is saved to:
+
+   ```text
+   /content/drive/MyDrive/FireSmokeYOLO/predictions/demo/test.jpg
+   ```
+
+It is also possible to put more than one file type such as `.jpg`, `.jpeg`, `.png`, or short video files inside `fire_smoke_demo`.  
+
 
 ## How to Run the Project
 
@@ -39,9 +97,6 @@ These results apply to an educational prototype and not to a tested fire alarm s
 
 List of dependencies of python are given in `requirements.txt`. Google colab provides several scientific python packages along with PyTorch and GPU access.  
 
-## Dataset
-
-Image data set is not included in this repository due to some reasons related to size and distribution of the data set. For more details, see `data/README.md`.
 
 ## Reproducibility Notes
 
